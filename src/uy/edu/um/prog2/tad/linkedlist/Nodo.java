@@ -6,6 +6,7 @@ public class Nodo<T> {
     private Nodo<T> siguiente;
     private Nodo<T> anterior;
 
+
     public Nodo(T val){
         this.value = val;
     }
