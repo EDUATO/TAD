@@ -1,6 +1,9 @@
-TAD program that has linkedlist, circularlist, queue, doble queue, priority queue
-and binary trees in java
+Programa TAD, incluye linkedlist, circularlist, queue, doble queue, priority queue, 
+arboles binarios y hashmap cerrado en java.
 
-Eduardo Delfante and Santiago Onandi
+TAD program that has linkedlist, circularlist, queue, doble queue, priority queue, binary trees 
+and closed hash in java.
 
-v. 1.0
+Eduardo Delfante and Santiago Onandi.
+
+Programacion II, Universidad de Montevideo.
