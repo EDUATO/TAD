@@ -76,5 +76,12 @@ public class Main {
         System.out.println(myTree.size());
         System.out.println(myTree.countCompleteElements());
         myTree.porNivel().printList();
+
+        /**
+         * TAD PROGRAM THAT HAS LINKEDLIST, CIRCULARLIST, QUEUE, DOBLE QUEUE, PRIORITY QUEUE
+         * AND BINARY TREES MADE IN JAVA
+         *
+         * Eduardo Delfante, Santiago Onandi
+         * **/
     }
 }
