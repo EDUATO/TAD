@@ -1,3 +1,4 @@
+import uy.edu.um.prog2.tad.Hash.HashCerrado;
 import uy.edu.um.prog2.tad.linkedlist.ListaCircular;
 import uy.edu.um.prog2.tad.linkedlist.ListaDoblementeEncadenada;
 import uy.edu.um.prog2.tad.linkedlist.ListaEnlazada;
@@ -7,6 +8,8 @@ import uy.edu.um.prog2.tad.queue.MyQueue;
 import uy.edu.um.prog2.tad.queue.MyQueueImp;
 import uy.edu.um.prog2.tad.trees.MyTree;
 import uy.edu.um.prog2.tad.trees.Tree;
+
+import java.util.Hashtable;
 
 /**
  * TAD PROGRAM THAT HAS LINKEDLIST, CIRCULARLIST, QUEUE, DOBLE QUEUE, PRIORITY QUEUE
@@ -77,11 +80,21 @@ public class Main {
         System.out.println(myTree.countCompleteElements());
         myTree.porNivel().printList();
 
-        /**
-         * TAD PROGRAM THAT HAS LINKEDLIST, CIRCULARLIST, QUEUE, DOBLE QUEUE, PRIORITY QUEUE
-         * AND BINARY TREES MADE IN JAVA
-         *
-         * Eduardo Delfante, Santiago Onandi
-         * **/
+        // Pruebas hash
+        HashCerrado<Integer, String> hash = new HashCerrado<>(2);
+        hash.put(7, "Hola");
+        hash.put(2, "ass");
+        hash.put(9, "queso");
+        hash.put(9, "durazno");
+        hash.put(10, "empanada");
+        System.out.println(hash.capacity);
+        String b = hash.showHash();
+        System.out.println(b);
+        System.out.println(hash.contains(9));
+
+        Hashtable<Integer, String> hashjava = new Hashtable<>();
+        hashjava.put(1, "Hola");
+        hashjava.put(1, "jeje");
+        System.out.println(hashjava.get(1));
     }
 }
