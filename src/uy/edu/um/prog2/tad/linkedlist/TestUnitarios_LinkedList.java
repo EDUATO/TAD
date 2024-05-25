@@ -13,6 +13,7 @@ public class TestUnitarios_LinkedList {
         listaTesteos.add(2);
         listaTesteos.add(3);
         listaTesteos.add(4);
+        assertEquals(4, listaTesteos.size());
     }
 
 

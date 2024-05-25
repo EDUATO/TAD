@@ -5,11 +5,9 @@ import uy.edu.um.prog2.tad.linkedlist.ListaDoblementeEncadenada;
 
 public class MyPriorityQueueImp<T extends Comparable<T>> implements MyPriorityQueue<T>{
     private ListaDoblementeEncadenada<T> lista = new ListaDoblementeEncadenada<>();
-    private Integer length = 0;
     @Override
     public void enqueueWithPriority(T element, int prioridad) {
         lista.addWithPriority(element, prioridad);
-        length ++;
     }
 
     @Override
@@ -29,11 +27,11 @@ public class MyPriorityQueueImp<T extends Comparable<T>> implements MyPriorityQu
 
     @Override
     public boolean isEmpty() {
-        return this.length == 0;
+        return lista.isEmpty();
     }
 
     @Override
     public int size() {
-        return this.length;
+        return lista.size();
     }
 }

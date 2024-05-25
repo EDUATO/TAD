@@ -8,13 +8,11 @@ public class MyDobleQueueImp<T extends Comparable<T>> implements MyDoubleQueue {
     private Nodo<T> primero;
     private Nodo<T> ultimo;
     private ListaDoblementeEncadenada<T> lista;
-    private Integer length;
 
     public MyDobleQueueImp() {
         this.primero = null;
         this.ultimo = null;
         this.lista = new ListaDoblementeEncadenada<>();
-        this.length = 0;
     }
 
     public Nodo<T> obtenerPrimerNodo(){
@@ -36,12 +34,11 @@ public class MyDobleQueueImp<T extends Comparable<T>> implements MyDoubleQueue {
         nodoAAgregar = new Nodo<T>((T)element);
         lista.insert(0,nodoAAgregar.getValue());
         primero = nodoAAgregar;
-        length+=1;
     }
 
     @Override
     public Object dequeueLeft() throws EmptyQueueException {
-        if (length!=0){
+        if (this.size()!=0){
             Nodo<T>primeroTemp = obtenerPrimerNodo();
             lista.remove(0);
             return primeroTemp.getValue();
@@ -55,16 +52,15 @@ public class MyDobleQueueImp<T extends Comparable<T>> implements MyDoubleQueue {
     public void enqueueRight(Object element) {
         Nodo<T> nodoAAgregar;
         nodoAAgregar = new Nodo<T>((T)element);
-        lista.insert(length-1,nodoAAgregar.getValue());
+        lista.insert(this.size()-1,nodoAAgregar.getValue());
         ultimo = nodoAAgregar;
-        length+=1;
     }
 
     @Override
     public Object dequeueRight() throws EmptyQueueException {
-        if (length!=0){
+        if (this.size()!=0){
             Nodo<T>ultimoTemp = obtenerUltimoNodo();
-            lista.remove(length-1);
+            lista.remove(this.size()-1);
             return ultimoTemp.getValue();
         }
         else{
@@ -75,5 +71,9 @@ public class MyDobleQueueImp<T extends Comparable<T>> implements MyDoubleQueue {
     @Override
     public boolean isEmpty() {
         return lista.isEmpty();
+    }
+
+    public int size(){
+        return this.lista.size();
     }
 }

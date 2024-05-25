@@ -5,7 +5,7 @@ import uy.edu.um.prog2.tad.linkedlist.ListaDoblementeEncadenada;
 import uy.edu.um.prog2.tad.linkedlist.Nodo;
 
 
-public class MyQueueImp <T extends Comparable<T>> implements MyQueue {
+public class MyQueueImp <T extends Comparable<T>> implements MyQueue<T> {
     private ListaDoblementeEncadenada<T> lista;
 
     public MyQueueImp() {
@@ -19,14 +19,12 @@ public class MyQueueImp <T extends Comparable<T>> implements MyQueue {
     }
 
     @Override
-    public void enqueue(Object element) {
-        Nodo<T> nodoAAgregar;
-        nodoAAgregar = new Nodo<T>((T)element);
-        lista.add(nodoAAgregar.getValue());
+    public void enqueue(T element) {
+        lista.add(element);
     }
 
     @Override
-    public Object dequeue() throws EmptyQueueException {
+    public T dequeue() throws EmptyQueueException {
         if (lista.size()!=0){
             Nodo<T>primero = obtenerPrimerNodo();
             lista.remove(0);

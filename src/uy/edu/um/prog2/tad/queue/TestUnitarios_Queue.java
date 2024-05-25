@@ -33,6 +33,6 @@ public class TestUnitarios_Queue {
         MyQueue<Integer> queuePrueba = new MyQueueImp<>();
         assertTrue(queuePrueba.isEmpty());
         queuePrueba.enqueue(10);
-        assertTrue(!queuePrueba.isEmpty());
+        assertFalse(queuePrueba.isEmpty());
     }
 }

@@ -73,7 +73,7 @@ public class ListaEnlazada<T extends Comparable<T>>
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return (this.size() == 0);
     }
 
     @Override
@@ -85,7 +85,7 @@ public class ListaEnlazada<T extends Comparable<T>>
      * Inserta un valor en una posicion dada
      */
     private void insert(int position, T value, int priority){
-        if (position >= length){
+        if (position > this.size()){
             throw new IndexOutOfBoundsException();
         }
 
