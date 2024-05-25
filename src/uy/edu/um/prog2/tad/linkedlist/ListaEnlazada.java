@@ -16,6 +16,9 @@ public class ListaEnlazada<T extends Comparable<T>>
     */
     @Override
     public void remove(int position) {
+        if (position >= length){
+            throw new IndexOutOfBoundsException();
+        }
 
         Nodo<T> temp;
         Nodo<T> temp2;
@@ -40,6 +43,9 @@ public class ListaEnlazada<T extends Comparable<T>>
      * position 0 devuelve primero
      */
     protected Nodo<T> getNode(int position) {
+        if (position >= length){
+            throw new IndexOutOfBoundsException();
+        }
 
         Nodo<T> temp = primero;
         for (int i = 0; i<position; i++){
@@ -79,6 +85,9 @@ public class ListaEnlazada<T extends Comparable<T>>
      * Inserta un valor en una posicion dada
      */
     private void insert(int position, T value, int priority){
+        if (position >= length){
+            throw new IndexOutOfBoundsException();
+        }
 
         Nodo<T> new_ = new Nodo<>(value, priority);
         if (position == 0){
