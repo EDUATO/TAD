@@ -7,7 +7,7 @@ import exceptions.WrongArgumentException;
 import uy.edu.um.prog2.tad.linkedlist.Lista;
 
 public interface MyTree<K extends Comparable<K>, T> {
-    T find(K key);
+    T find(K key) throws KeyDoesNotExist;
     void insert (K key, T data, K parentKey) throws ChildsAreOccupied, WrongArgumentException, KeyDoesNotExist, KeyAlreadyExists;
     void delete (K key);
 

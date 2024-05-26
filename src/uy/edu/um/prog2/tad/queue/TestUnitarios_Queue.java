@@ -27,7 +27,6 @@ public class TestUnitarios_Queue {
         assertEquals(2, queuePrueba.size());
     }
 
-
     @Test
     public void testIsEmpty() {
         MyQueue<Integer> queuePrueba = new MyQueueImp<>();
@@ -35,4 +34,29 @@ public class TestUnitarios_Queue {
         queuePrueba.enqueue(10);
         assertFalse(queuePrueba.isEmpty());
     }
+
+    @Test
+    public void testNormalPriorityQueue() {
+        MyPriorityQueue<Integer> q = new MyPriorityQueueImp<>();
+        q.enqueueWithPriority(1, 2);
+        q.enqueueWithPriority(2, 3);
+        q.enqueueWithPriority(3, 1);
+        q.enqueueWithPriority(4, 2);
+    }
+
+    @Test
+    public void testDequeuePriorityQueue() throws Exceptions.EmptyQueueException {
+        MyPriorityQueue<Integer> q = new MyPriorityQueueImp<>();
+        q.enqueueWithPriority(1, 2);
+        q.enqueueWithPriority(2, 3);
+        q.enqueueWithPriority(3, 1);
+        q.enqueueWithPriority(4, 2);
+
+        q.dequeue();
+        q.dequeue();
+        q.dequeue();
+        q.dequeue();
+        assertThrows(Exceptions.EmptyQueueException.class, () -> q.dequeue());
+    }
+
 }

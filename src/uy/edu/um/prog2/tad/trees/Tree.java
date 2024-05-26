@@ -12,7 +12,11 @@ import uy.edu.um.prog2.tad.trees.Node;
 public class Tree<K extends Comparable<K>, T> implements MyTree<K, T> {
     public Node<K, T> first;
     @Override
-    public T find(K key) {
+    public T find(K key) throws KeyDoesNotExist {
+        Node<K, T> nodo = first.find(key);
+        if (nodo == null){
+            throw new KeyDoesNotExist();
+        }
         return first.find(key).getData();
     }
 
@@ -110,6 +114,9 @@ public class Tree<K extends Comparable<K>, T> implements MyTree<K, T> {
      * Contaba solo los nodos que tienen hijo izquierdo y derecho.
      * **/
     private int countCompleteElements(Node<K, T> root) {
+        if (this.size() == 0){
+            return 0;
+        }
         int valores = 0;
         if (root.getRightChild() != null){
             valores += countCompleteElements(root.getRightChild());
