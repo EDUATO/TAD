@@ -5,10 +5,12 @@ import java.util.EmptyStackException;
 public class Stack<T> implements MyStack<T>{
     private Node<T> primero;
     private int lenght = 0;
+
     @Override
     public int lenght(){
         return lenght;
     }
+
 
     @Override
     public void push(T value) {
@@ -16,8 +18,11 @@ public class Stack<T> implements MyStack<T>{
     }
 
     private Node<T> getNode(int pos){
+        if (primero == null){
+            return null;
+        }
         Node<T> temp = primero;
-        for (int i = 0; i<pos; i++){
+        for (int i = 1; i<pos; i++){
             temp = temp.getSiguiente();
         }
         return temp;
@@ -45,6 +50,11 @@ public class Stack<T> implements MyStack<T>{
     }
 
     private void addToTheEnd(T value) {
+        if (primero == null){
+            primero = new Node<>(value);
+            lenght++;
+            return;
+        }
         Node<T> nFin = this.getNode(this.lenght());
         Node<T> temp = new Node<>(value);
         nFin.setSiguiente(temp);
@@ -52,7 +62,7 @@ public class Stack<T> implements MyStack<T>{
     }
 
     public boolean isEmpty(){
-        return lenght() > 0;
+        return lenght() == 0;
     }
 
     @Override
