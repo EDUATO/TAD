@@ -1,12 +1,12 @@
 package uy.edu.um.prog2.tad.Hash;
 
 import java.lang.Math;
-public class HashCerrado<K extends Comparable<K>,V> implements um.edu.uy.Hash.MyHashInterface<K,V> {
-private NodoHash[] tablahash;
-private int size;
-private double LoadFactor =0.79;
+public class HashCerrado<K extends Comparable<K>,V> implements MyHashInterface<K,V> {
+    private NodoHash[] tablahash;
+    private int size;
+    private double LoadFactor =0.79;
 
-public int capacity;
+    public int capacity;
 
     public HashCerrado(int capacity) {
         this.capacity = capacity;
@@ -92,5 +92,13 @@ public int capacity;
         }
         resp += "}";
         return resp;
+    }
+
+    public int capacity(){
+        return this.capacity;
+    }
+
+    public int size(){
+        return this.size;
     }
 }
