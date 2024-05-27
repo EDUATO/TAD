@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 public class TestUnitariosHash {
     MyHashInterface<Integer, String> hashPrueba = new HashCerrado<>(2);
 
-    @Tests
+    @Test
     public void testPut(){
         hashPrueba.put(10, "Prueba");
         hashPrueba.put(3, "Prueba2");

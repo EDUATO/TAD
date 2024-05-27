@@ -1,4 +1,4 @@
-import uy.edu.um.prog2.tad.Hash.HashCerrado;
+import uy.edu.um.prog2.tad.hash.HashCerrado;
 import uy.edu.um.prog2.tad.linkedlist.ListaCircular;
 import uy.edu.um.prog2.tad.linkedlist.ListaDoblementeEncadenada;
 import uy.edu.um.prog2.tad.linkedlist.ListaEnlazada;
