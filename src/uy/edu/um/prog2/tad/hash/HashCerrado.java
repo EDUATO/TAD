@@ -1,4 +1,4 @@
-package uy.edu.um.prog2.tad.Hash;
+package uy.edu.um.prog2.tad.hash;
 
 import java.lang.Math;
 public class HashCerrado<K extends Comparable<K>,V> implements MyHashInterface<K,V> {

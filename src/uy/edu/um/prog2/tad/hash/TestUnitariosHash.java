@@ -1,4 +1,4 @@
-package uy.edu.um.prog2.tad.Hash;
+package uy.edu.um.prog2.tad.hash;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 public class TestUnitariosHash {
     MyHashInterface<Integer, String> hashPrueba = new HashCerrado<>(2);
 
-    @Test
+    @Tests
     public void testPut(){
         hashPrueba.put(10, "Prueba");
         hashPrueba.put(3, "Prueba2");

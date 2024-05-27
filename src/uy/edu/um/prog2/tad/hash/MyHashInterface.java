@@ -1,4 +1,4 @@
-package uy.edu.um.prog2.tad.Hash;
+package uy.edu.um.prog2.tad.hash;
 
 public interface MyHashInterface <K,V> {
 
