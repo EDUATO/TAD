@@ -1,4 +1,5 @@
 package uy.edu.um.prog2.tad.queue;
+
 import static org.junit.Assert.*;
 import org.junit.Test;
 
